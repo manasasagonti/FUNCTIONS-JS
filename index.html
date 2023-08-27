@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>FUNCTIONS</title>
+</head>
+<body>
+    <h2>QUESTION 1: Create one function with zero parameter having a console statement;</h2>
+    <br>
+
+    <h2>QUESTION 2: Create one function which takes two values as a parameter and print the sum of them as "Sum of 3, 4 is 7"</h2>
+    <br>
+    <h2>QUESTION 3: Create one arrow function</h2>
+    <br>
+    <h2>QUESTION 4: "Print output: 
+        var x = 21;
+        var girl = function () {
+            console.log(x);
+            var x = 20;
+        };
+        girl ();"</h2>
+        <h3 class="output">The output will be undefined because the value was not returned and also a variable has not been assigned a value.
+            the first scope will look at scope level variables whether it is local or global level and if the variable is defined 2 times in global scope and also the local scope in the function then function takes the precedence local scope variable 
+            and if we use the variable before declaration then function will execute console statement .
+        </h3>
+
+    <h2>QUESTION 5: "Print output: 
+        var x = 21;
+        girl ();
+        console.log(x)
+        function girl() {
+            console.log(x);
+            var x = 20;
+        };
+        "</h2>
+
+        <h3 class="output">the output is undefined and 21 , here girl is not defined. the first scope will look at scope level variables whether it is local or global level and if the variable is defined 2 times in global scope and also the local scope in the function then function takes the precedence local scope variable 
+            and if we use the variable before declaration then function will execute console statement . And after invoking the girl() it executes the console statement and prints the global scope variable of x value, in the above code hoisted is occurred. </h3>
+
+     <h2>QUESTION6: "Print output
+
+        var x = 21;
+        a();
+        b();
+        
+          function a() {
+            
+           x = 20;
+          console.log(x);
+        };
+         function b() {
+            
+            x = 40;
+           console.log(x);
+        };"</h2>
+        <h3 class="output">the output is 20 and 40.
+            In this function x is global as x is not declared . After calling function a() and function b() when function a() executes it prints the x value as 20 and when function b() executes it prints the x value as 40.
+        </h3>   
+
+        <h2>QUESTION7: Write a function that accepts parameter n and returns factorial of n</h2>
+
+        <h2>QUESTION8: "Guess the Output
+
+            function FindSum(a, b){
+                return a + b;
+            }
+            
+            function DisplayData(data, batch){
+                console.log(`i am from ${data} and My batch is EA${batch}`)
+            }
+            
+            DisplayData("PrepBytes", FindSum(10, 9));"</h2>
+            <h3 class="output">The output will be "i am from PrepBytes and My batch is EA19"
+                after calling the DisplayData() the variable takes the value of the "PrepBytes" and the FindSum() returns the 19 value . At last it prints "i am from PrepBytes and My batch is EA19."
+            </h3>
+
+         <h2>QUESTION9: "Guess the output
+
+            Abc();
+            const Abc = function(){
+                let value = 20;
+                console.log(value);
+            }"</h2>
+            <h3 class="output">The output displays an error message. We cannot access the Abc before the initialization. And if we access Abc before declaration or initialization it causes hoisting.</h3>
+            
+            <h2>QUESTION 10: "Guess the output
+
+                var a = 10;
+                (function (){
+                    console.log(a);
+                    var a = 20;
+                })();"</h2>
+                <h3 class="output">The output will be undefined.
+                    As a is declared without initialization it causes hoisting.
+                </h3>
+
+                <h2>QUESTION 11: "Guess the output
+                
+const greet =  function(name){
+    return function(m){
+    
+        console.log(`Hi!! ${name}, ${m}`);
+    }
+}
+  
+const greet_message = greet('EA19');
+greet_message(""Welcome To PrepBytes"")"</h2>
+<h3 class="output">The output will be Hi!! EA19, Welcome To PrepBytes.
+    when greet() is called it gives the value EA19 and when the greet_message is called it gives the Welcome to PrepBytes message and returns the output.
+</h3>
+
+    <script src="index.js"></script>
+</body>
+</html>
